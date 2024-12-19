@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A comprehensive framework consisting of sequential continual learning and machine unlearning requests for improving classification tasks">
+  <meta property="og:title" content="A Unified Framework for Continual Learning and Machine Unlearning"/>
+  <meta property="og:description" content="A comprehensive framework consisting of sequential continual learning and machine unlearning requests for improving classification tasks"/>
+  <meta property="og:url" content="https://respailab.github.io/unlearning-or-concealment"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+  <meta name="keywords" content="diffusion machine unlearning concept erasure">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>A Unified Framework for Continual Learning and Machine Unlearning</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/leaderboard.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js"],
+
+        equationNumbers: { autoNumber: "AMS" }
+      }
+    });
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .algorithm { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">A Unified Framework for Continual Learning and Machine Unlearning</h1>
+            <div class="is-size-5 publication-authors">
+				  <span class="author-block">
+					<a href="https://www.linkedin.com/in/romit23/" target="_blank">Romit Chatterjee<sup style="color:#6fbf73;">1</sup></a>, </span>
+
+				  <span class="author-block">
+					<a href="https://www.linkedin.com/in/vikram2000b" target="_blank">Vikram S Chundawat<sup style="color:#ffac33;">2</sup></a>, </span>
+
+          <span class="author-block">
+            <a href="https://ayushkumartarun.github.io/" target="_blank">Ayush K Tarun<sup style="color:#5833ff;">3</sup></a>, </span>
+
+				  <span class="author-block">
+					<a href="https://www.usf.edu/engineering/cse/people/mali-ankur.aspx" target="_blank">Ankur A Mali<sup style="color:#ed4b82;">4</sup></a>, </span>
+
+				  <span class="author-block">
+					<a href="https://murarimandal.github.io/" target="_blank">Murari Mandal<sup style="color:#000000">†, </sup><sup style="color:#6fbf73;">1</sup></a></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+					  <span class="author-block"><sup style="color:#6fbf73;">1</sup>RespAI Lab, KIIT Bhubaneswar</span>&nbsp;
+					  <span class="author-block"><sup style="color:#ffac33;">2</sup>SagepilotAI</span>&nbsp;
+            <span class="author-block"><sup style="color:#5833ff;">3</sup>EPFL</span>&nbsp;
+					  <span class="author-block"><sup style="color:#ed4b82;">4</sup>University of South Florida</span>
+                  </div>
+
+				  <br>
+                  <div class="is-size-5 publication-authors">
+					  <span class="author-block"><sup style="color:#000000">†</sup>Corresponding Author:</span>
+					  <span class="author-block"><a href="mailto:murari.mandalfcs@kiit.ac.in">murari.mandalfcs@kiit.ac.in</a></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2408.11374" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <span class="link-block">
+                    <!-- <a href="https://github.com/YOUR REPO HERE" target="_blank"
+						class="external-link button is-normal is-rounded is-dark"> -->
+					<a href="https://github.com/respailab/unlearning-or-concealment" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+					<a href="https://arxiv.org/abs/2408.11374" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+		<img src="static/images/Motiv.png" alt="Motivation for our paper" style="padding-left: 300px;"/>
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/videos/banner_video.mp4" -->
+        <!-- type="video/mp4"> -->
+      <!-- </video> -->
+      <h2 class="subtitle has-text-centered">
+        The lack of a consistent framework for continual learning and unlearning makes it difficult to develop flexible models that can learn and forget dynamically. Disjointed techniques are limited in their ability to adapt to new knowledge while removing outdated or sensitive information, making them unsuitable for real-world applications.We
+        compare the isolated continual learning, machine unlearning problems to the unified continual learning-unlearning (CLUL) problem in the above figure.
+      </h2>
+    </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+		<img src="static/images/Method.png" alt="Proposed framework for our paper" style="padding-left: 250px;"/>
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/videos/banner_video.mp4" -->
+        <!-- type="video/mp4"> -->
+      <!-- </video> -->
+      <h2 class="subtitle has-text-centered">
+        We propose a controlled knowledge distillation framework for managing continual learning and unlearning operations. It consists of a CL teacher, UL teacher, and a Student model, optimized through a unified loss function. The framework aims to preserve previously acquired knowledge while integrating new information. Contrastive distillation maintains existing knowledge similarities, while adaptive distillation incorporates new learning. For unlearning, KL-Divergence drives the targeted removal of obsolete information. The framework maintains consistency even after random sequences of CL and UL requests. 
+      </h2>
+    </div>
+</section>
+<!-- End teaser video -->
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Continual learning and machine unlearning are crucial challenges in machine learning, typically addressed separately.
+            Continual learning focuses on adapting to new knowledge
+            while preserving past information, whereas unlearning involves selectively forgetting specific subsets of data. In this
+            paper, we introduce a novel framework that jointly tackles
+            both tasks by leveraging controlled knowledge distillation.
+            Our approach enables efficient learning with minimal forgetting and effective targeted unlearning. By incorporating a
+            fixed memory buffer, the system supports learning new concepts while retaining prior knowledge. The distillation process is carefully managed to ensure a balance between acquiring new information and forgetting specific data as needed.
+            Experimental results on benchmark datasets show that our
+            method matches or exceeds the performance of existing approaches in both continual learning and machine unlearning.
+            This unified framework is the first to address both challenges
+            simultaneously, paving the way for adaptable models capable
+            of dynamic learning and forgetting while maintaining strong
+            overall performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" id="leaderboard" style="padding-top: 30px;text-align: center;">Quantitative Results</h2>
+      <div id="results-carousel" class="carousel results-carousel" style="display: block;margin-left: auto;margin-right: auto;width: 40%;">
+
+       <div class="item">
+        <img src="static/images/carousel0.png" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2> -->
+      </div>
+
+      <div class="item">
+        <img src="static/images/carousel1.png" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2> -->
+      </div>
+
+      <div class="item">
+        <img src="static/images/carousel2.png" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2> -->
+     </div>
+
+     <div class="item">
+      <img src="static/images/carousel3.png" alt="MY ALT TEXT"/>
+      <!-- <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2> -->
+    </div>
+
+     <div class="item">
+      <img src="static/images/carousel4.png" alt="MY ALT TEXT"/>
+      <!-- <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2> -->
+    </div>
+
+     <div class="item">
+      <img src="static/images/carousel5.png" alt="MY ALT TEXT"/>
+      <!-- <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2> -->
+    </div>
+
+  </div>
+</div>
+</div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" id="leaderboard" style="padding-top: 30px;text-align: center;">Baseline Results</h2>
+      <div id="results-carousel" class="carousel results-carousel" style="display: block;margin-left: auto;margin-right: auto;width: 40%;">
+
+       <div class="item">
+        <img src="static/images/carousel6.png" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2> -->
+      </div>
+
+      <div class="item">
+        <img src="static/images/carousel7.png" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2> -->
+      </div>
+
+  </div>
+</div>
+</div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" id="leaderboard" style="padding-top: 30px;text-align: center;">Ablation Studies</h2>
+      <div id="results-carousel" class="carousel results-carousel" style="display: block;margin-left: auto;margin-right: auto;width: 40%;">
+
+       <div class="item">
+        <img src="static/images/carousel8.png" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2> -->
+      </div>
+
+      <div class="item">
+        <img src="static/images/carousel9.png" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2> -->
+      </div>
+
+      <div class="item">
+        <img src="static/images/carousel10.png" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2> -->
+     </div>
+
+  </div>
+</div>
+</div>
+</section>
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container"> -->
+      <!-- Paper video. -->
+      <!-- <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+@misc{chatterjee2024unifiedframeworkcontinuallearning,
+  title={A Unified Framework for Continual Learning and Machine Unlearning}, 
+  author={Romit Chatterjee and Vikram Chundawat and Ayush Tarun and Ankur Mali and Murari Mandal},
+  year={2024},
+  eprint={2408.11374},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2408.11374}, 
+}
+	  </code></pre>
+    </div>
+	</section>
+
+
+  <footer class="footer">
+	  <div class="container">
+		<div class="columns is-centered">
+		  <div class="column is-8">
+			<div class="content">
+
+			  <p>
+				This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+				You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+				Commons Attribution-ShareAlike 4.0 International License</a>.
+			  </p>
+
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</footer>
+  </body>
+  	    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "data.json",
+                type: "GET",
+                success: function(data) {
+                    $(".latex-content").html(data.latex_equation);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
+        });
+    </script>
+</html>
