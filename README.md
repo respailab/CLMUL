@@ -1,7 +1,7 @@
 # A Unified Framework for Continual Learning and Machine Unlearning
 
 <a href="https://respailab.github.io/CLMUL/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
-<a href="https://arxiv.org/abs/2408.11374"><img src="https://img.shields.io/badge/arXiv-2409.05668v2-b31b1b.svg"></a>
+<a href="https://arxiv.org/abs/2408.11374"><img src="https://img.shields.io/badge/arXiv-2408.11374v1-b31b1b.svg"></a>
 <a href="https://opensource.org/licenses/BSD-2-Clause"><img src="https://img.shields.io/badge/License-BSD_2--Clause-purple.svg"></a>
 
 
